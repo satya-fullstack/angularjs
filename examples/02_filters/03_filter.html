@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js">
+    </script>
+</head>
+<body>
+<div ng-app="" ng-init="students = [{name:'Mahesh',marks:100},{name:'suresh',marks:120}]">
+    <p>
+        <label>Search Student</label>
+        <input type="text" ng-model="searchStudent" />
+    </p>
+    <table>
+        <tr><th>Student Name</th><th>Total marks</th></tr>
+        <tr ng-repeat = "student in students | filter: searchStudent">
+            <td>{{ student.name}}</td><td>{{ student.marks}}</td>
+        </tr>
+    </table>
+</div>
+</body>
+</html>

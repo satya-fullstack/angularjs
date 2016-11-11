@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js">
+    </script>
+</head>
+<body>
+<div ng-app="" ng-init="students = [{name:'Balu',marks:100},{name:'Ajay',marks:120}]">
+    <table>
+        <tr><th>Student Name</th><th>Total marks</th></tr>
+        <tr ng-repeat = "student in students | orderBy:'name'">
+            <td>{{ student.name}}</td><td>{{ student.marks}}</td>
+        </tr>
+    </table>
+</div>
+</body>
+</html>

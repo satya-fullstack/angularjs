@@ -1,0 +1,1 @@
+var arthApp = angular.module('arthApp',[]);

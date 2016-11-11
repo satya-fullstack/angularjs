@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+</head>
+<body>
+<div ng-app="userApp" ng-controller="userController">
+    <table>
+        <tr ng-repeat="user in users">
+            <td>{{user.name}}</td>
+
+        </tr>
+    </table>
+</div>
+
+<script>
+    var mainApp = angular.module("userApp", []);
+    mainApp.controller('userController', function ($scope) {
+
+        $scope.users = [{name:'Mahesh',marks:100},{name:'suresh',marks:120}];
+    });
+
+</script>
+
+</body>
+</html>
